@@ -54,11 +54,6 @@ body {
   margin: auto;
 }
 
-.content {
-  margin-left: 350px;
-  margin-top: 50px;
-}
-
 .progressbar-text {
  font-size: 11px;
  color: #8c8c8e !important;
@@ -122,6 +117,17 @@ body {
   }
   to {
     transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
     opacity: 1;
   }
 }

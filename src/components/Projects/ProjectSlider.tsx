@@ -6,11 +6,11 @@ import { MdDone } from "react-icons/md";
 import { Button, Image } from "antd";
 import { useRef } from "react";
 const ProjectSlider = () => {
-  const swiperRef = useRef< any | null>();
+  const swiperRef = useRef<any | null>();
 
   const handleMouseEnter = () => {
-    if(swiperRef.current){
-        swiperRef.current.swiper.autoplay.stop();
+    if (swiperRef.current) {
+      swiperRef.current.swiper.autoplay.stop();
     }
   };
 
@@ -22,12 +22,39 @@ const ProjectSlider = () => {
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       spaceBetween={20}
-      slidesPerView={3}
+      slidesPerView={"auto"}
       navigation
       loop={true}
       autoplay={{ delay: 1000 }}
       ref={swiperRef}
       className="mt-4"
+      breakpoints={{
+        // when window width is >= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        // when window width is >= 480px
+        480: {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        // when window width is >= 640px
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        // when window width is >= 992
+        992: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        // when window width is >= 1200
+        1200: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      }}
     >
       {data.projects.map((elem) => (
         <SwiperSlide>
