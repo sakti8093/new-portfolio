@@ -1,4 +1,3 @@
-import "./SideBar.css";
 import CircularProgressSideBar from "./Sidebar/CircularProgressSideBar";
 import ProfileSideBar from "./Sidebar/ProfileSideBar";
 import LineProgressSideBar from "./Sidebar/LineProgressSideBar";
@@ -8,13 +7,13 @@ import SocialIcons from "./Sidebar/SocialIcons";
 
 const SideBar = () => {
   return (
-    <div className="w-[300px] h-[100vh] fixed">
+    <div className="w-[300px] h-[100vh] fixed sidebar top-0">
       <ProfileSideBar />
-      <div className="scroll-content p-4" >
-      <CircularProgressSideBar />
-      <LineProgressSideBar />
-      <KeyPoints />
-      <SoftSkills />
+      <div className="scroll-content p-4">
+        <CircularProgressSideBar />
+        <LineProgressSideBar />
+        <KeyPoints />
+        <SoftSkills />
       </div>
       <SocialIcons />
     </div>
