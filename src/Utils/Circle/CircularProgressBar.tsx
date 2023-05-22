@@ -7,7 +7,7 @@ type prop = {
 }
 
 const CircularProgressBar:React.FC<prop> = ({ progress,color }) => {
-  const containerRef = useRef(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const progressBarRef = useRef<any>(null);
 
   useEffect(() => {
@@ -20,17 +20,17 @@ const CircularProgressBar:React.FC<prop> = ({ progress,color }) => {
       text: {
         autoStyleContainer: false,
       },
-      step: (_state, bar) => {
-        bar.setText(`${progress}%`);
-      },
     });
 
+    progressBar.setText(`${progress}%`);
     progressBar.animate(progress / 100);
 
     progressBarRef.current = progressBar;
 
     return () => {
-      progressBarRef.current.destroy();
+      if(progressBarRef){
+        progressBarRef.current.destroy();
+      }
     };
   }, [progress]);
 

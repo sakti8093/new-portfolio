@@ -1,9 +1,14 @@
-import React, { useEffect, useRef } from 'react';
+import  React, { useEffect, useRef } from 'react';
 import ProgressBar from 'progressbar.js';
 
-const LineProgressBar = ({ progress,color }) => {
-  const containerRef = useRef(null);
-  const progressBarRef = useRef(null);
+type prop = {
+  progress : number,
+  color : string
+}
+
+const LineProgressBar:React.FC<prop>  = ({ progress,color }) => {
+  const containerRef = useRef<any>(null);
+  const progressBarRef = useRef<any>(null);
 
   useEffect(() => {
     const progressBar = new ProgressBar.Line(containerRef.current, {
@@ -21,13 +26,13 @@ const LineProgressBar = ({ progress,color }) => {
         borderRadius:'20px',
         stroke :'#eee',
       },
-      step: (_state, bar) => {
-        bar.setText(progress + ' %');
-      },
     });
-
+    
+    progressBar.setText(`${progress}%`);
     progressBar.animate(progress / 100);
+   if(progressBarRef.current){
     progressBarRef.current = progressBar;
+   }
 
     return () => {
       progressBarRef.current.destroy();

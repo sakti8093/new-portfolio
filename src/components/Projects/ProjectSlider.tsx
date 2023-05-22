@@ -1,12 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore,{ Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import "swiper/swiper-bundle.css";
 import data from "../../data";
 import { MdDone } from "react-icons/md";
 import { Button, Image } from "antd";
 import { useRef } from "react";
 const ProjectSlider = () => {
-  const swiperRef = useRef< SwiperCore | null>();
+  const swiperRef = useRef< any | null>();
 
   const handleMouseEnter = () => {
     if(swiperRef.current){

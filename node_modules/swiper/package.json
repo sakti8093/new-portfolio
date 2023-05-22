@@ -7,8 +7,14 @@
   "main": "./swiper.esm.js",
   "module": "./swiper.esm.js",
   "exports": {
-    ".": "./swiper.esm.js",
-    "./core": "./swiper.esm.js",
+    ".": {
+      "types": "./swiper.d.ts",
+      "default": "./swiper.esm.js"
+    },
+    "./core": {
+      "types": "./swiper.d.ts",
+      "default": "./swiper.esm.js"
+    },
     "./swiper.esm.js": "./swiper.esm.js",
     "./bundle": "./swiper-bundle.esm.js",
     "./swiper-bundle.esm.js": "./swiper-bundle.esm.js",
