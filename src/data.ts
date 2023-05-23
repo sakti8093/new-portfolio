@@ -1,4 +1,5 @@
 import quiz from '../src/assets/quiz.png'
+import sakti_masai from '../src/assets/sakti_masai.jpg'
 type data = {
     languages: languages[] 
     key_points : string[]
@@ -13,6 +14,7 @@ type education ={
     college :string,
     duration :string
     achievements:string[]
+    certificate:string
 }
 
 type languages = {
@@ -181,7 +183,8 @@ const data : data = {
             achievements:[
                 "Cleared all units in 1 attempt",
                 "Involved in 3 collabrative Projects"
-            ]
+            ],
+            certificate:sakti_masai
         },
         {
             name :"Btech in Automobile Engineering",
@@ -190,7 +193,8 @@ const data : data = {
             achievements:[
                 "Secured 9.24 CGPA",
                 "Awarded as Branch Topper"
-            ]
+            ],
+            certificate:sakti_masai
         },
         {
             name:"Diploma in Mechanical Engineering",
@@ -199,7 +203,8 @@ const data : data = {
             achievements :[
                 "Secured 75% in Academcs",
                 "within top 10 rankers"
-            ]
+            ],
+            certificate:sakti_masai
         },
         {
             name:"Schooling till Matriculation",
@@ -207,7 +212,8 @@ const data : data = {
             duration:"Aug 2005 - Aug 2015",
             achievements :[
                 "Secured 8.2 CGPA in Academcs",
-            ]
+            ],
+            certificate:sakti_masai
         }
     ]
 

@@ -4,6 +4,7 @@ import Projects from "./components/Projects";
 import Education from "./components/Education";
 import { FaHamburger } from "react-icons/fa";
 import { useRef } from "react";
+import ContactBox from "./components/ContactBox";
 
 const App = () => {
   const profileRef = useRef<HTMLDivElement | null>(null);
@@ -31,6 +32,7 @@ const App = () => {
         <Home />
         <Projects />
         <Education />
+        <ContactBox />
       </div>
     </div>
   );
