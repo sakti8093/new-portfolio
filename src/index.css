@@ -83,7 +83,7 @@ body {
 
 .profile {
   background: var(--primary-bg);
-  box-shadow:0 1px 4px 0 var(--color-box-shadow-0);
+ border-bottom: 1px solid black;
 }
 
 .scroll-content {
