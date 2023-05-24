@@ -103,7 +103,6 @@ body {
 .banner {
   background-image: url('./assets/tunnel.gif');
   width: 100%;
-  height: 300px;
   background-position: center;
 }
 

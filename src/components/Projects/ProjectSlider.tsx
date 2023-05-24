@@ -3,7 +3,7 @@ import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from "swiper";
 import "swiper/swiper-bundle.css";
 import data from "../../data";
 import { MdDone } from "react-icons/md";
-import { Button, Image } from "antd";
+import { Badge, Button, Image } from "antd";
 import { useRef } from "react";
 const ProjectSlider = () => {
   const swiperRef = useRef<any | null>();
@@ -25,7 +25,7 @@ const ProjectSlider = () => {
       slidesPerView={"auto"}
       navigation
       loop={true}
-      autoplay={{ delay: 3000 }}
+      autoplay={{ delay: 2000 }}
       ref={swiperRef}
       className="mt-4"
       breakpoints={{
@@ -52,14 +52,15 @@ const ProjectSlider = () => {
         // when window width is >= 1200
         1200: {
           slidesPerView: 3,
-          spaceBetween: 30,
+          spaceBetween: 20,
         },
       }}
     >
       {data.projects.map((elem) => (
         <SwiperSlide>
+             <Badge.Ribbon text={elem.tag} color="magenta">
           <div
-            className="p-4 text-sm custom-backdrop rounded-lg project relative "
+            className="p-4 h-[400px] text-sm custom-backdrop rounded-lg project relative "
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
@@ -111,6 +112,7 @@ const ProjectSlider = () => {
               ))}
             </div>
           </div>
+          </Badge.Ribbon>
         </SwiperSlide>
       ))}
     </Swiper>
