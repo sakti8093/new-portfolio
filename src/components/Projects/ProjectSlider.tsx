@@ -25,7 +25,7 @@ const ProjectSlider = () => {
       slidesPerView={"auto"}
       navigation
       loop={true}
-      autoplay={{ delay: 1000 }}
+      autoplay={{ delay: 3000 }}
       ref={swiperRef}
       className="mt-4"
       breakpoints={{
@@ -74,8 +74,8 @@ const ProjectSlider = () => {
             <p className=" font-medium text-md text-white mt-2">{elem.name}</p>
             <p className="mt-1">{elem.desc}</p>
             <div className="w-full left-0 h-[180px] right-0 mt-2 absolute bottom-1 bg-background-0 features animate-slideInFromBottom p-4 rounded-2xl">
-              {elem.features.map((elem) => (
-                <div className="flex items-center gap-2 text-sm">
+              {elem.features.map((elem,index) => (
+                <div key={index} className="flex items-center gap-2 text-sm">
                   <p className="text-text-yellow">
                     <MdDone />
                   </p>
@@ -87,6 +87,8 @@ const ProjectSlider = () => {
                   type="ghost"
                   shape="round"
                   className="border-none text-white bg-purple-700"
+                  href={elem.live}
+                  target="_blank"
                 >
                   Live
                 </Button>
@@ -94,6 +96,8 @@ const ProjectSlider = () => {
                   type="ghost"
                   shape="round"
                   className="border-none bg-black text-white"
+                  target="_blank"
+                  href={elem.github}
                 >
                   Github
                 </Button>

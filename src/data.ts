@@ -1,5 +1,10 @@
 import quiz from '../src/assets/quiz.png'
 import sakti_masai from '../src/assets/sakti_masai.jpg'
+import weworkui from '../src/assets/weworkui.png'
+import admin_ui from '../src/assets/admin_ui.png'
+import ecommerce from '../src/assets/ecommerce.png'
+import tictactoe from '../src/assets/tictactoe.png'
+
 type data = {
     languages: languages[] 
     key_points : string[]
@@ -33,6 +38,9 @@ type projects = {
     desc : string,
     tech_stack : string[],
     features : string[],
+    live:string,
+    github : string,
+    tag:string
 }
 
 const data : data = {
@@ -60,6 +68,7 @@ const data : data = {
         "Java Script , Java",
         "Git , Github"
     ],
+    
     skills : [
         {
             skill:'HTML/CSS',
@@ -102,78 +111,76 @@ const data : data = {
                 "Responsive",
                 "Time Bound",
                 "3 screens - Home,Quiz,Score"
-            ]
+            ],
+            live:"https://quiz-app-dr11.vercel.app/",
+            github:"https://github.com/sakti8093/quiz-app",
+            tag:"Frontend"
         },
         {
-            name : "React Quiz App",
-            desc : "This is a Simple React Quiz App with time bound and mobile first approach",
-            img : quiz,
+            name : "Responsive Modern UI",
+            desc : "This is a static modern dashboard build with next js and typescript",
+            img : weworkui,
             tech_stack :[
-                "HTML","CSS","React" , "Chakra UI", "Type Script"
+                "HTML","CSS","Next Js" , "Figma","Type Script"
             ],
             features : [
-                "Mobile First Approach",
-                "Responsive",
-                "Time Bound",
-                "3 screens - Home,Quiz,Score"
-            ]
+                "Responsive (ipad mini and mobile)",
+            ],
+            live:"https://wework-ex0uxde09-sakti8093.vercel.app/",
+            github:"https://github.com/sakti8093/wework-ui",
+            tag:"Front end"
         },
         {
-            name : "React Quiz App",
-            desc : "This is a Simple React Quiz App with time bound and mobile first approach",
-            img : quiz,
+            name : "Ecommerce App",
+            desc : "This is a e-commerce react app with all basic functionality of ecommerce",
+            img : ecommerce,
             tech_stack :[
-                "HTML","CSS","React" , "Chakra UI", "Type Script"
+                "HTML","CSS","React" , "Chakra UI","Node js","express js","Context API"
             ],
             features : [
-                "Mobile First Approach",
                 "Responsive",
-                "Time Bound",
-                "3 screens - Home,Quiz,Score"
-            ]
+                "Sign up --> log in --> cart --> checkout",
+                "Personalized Cart",
+                "sorting and filtering"
+            ],
+            github:"https://github.com/sakti8093/Tenner-Goods-Clone",
+            live:"https://tender-goods-clone-sakti.netlify.app/",
+            tag:"Full stack"
         },
         {
-            name : "React Quiz App",
-            desc : "This is a Simple React Quiz App with time bound and mobile first approach",
-            img : quiz,
+            name : "Tic-Tac-Toe",
+            desc : "This is the epic Tic-Tac-Toe multiplayer game build using React js ",
+            img : tictactoe,
             tech_stack :[
-                "HTML","CSS","React" , "Chakra UI", "Type Script"
+                "HTML","CSS","JS","React"
             ],
             features : [
-                "Mobile First Approach",
                 "Responsive",
-                "Time Bound",
-                "3 screens - Home,Quiz,Score"
-            ]
+                "Multiplayer",
+                "Music Enabled"
+            ],
+            github:"https://github.com/sakti8093/Tic-Tac-Toe",
+            live:"https://app.netlify.com/sites/tic-tac-toe-sakti/overview",
+            tag:"Frontend"
         },
         {
-            name : "React Quiz App",
-            desc : "This is a Simple React Quiz App with time bound and mobile first approach",
-            img : quiz,
+            name : "Admin UI (by geektrust)",
+            desc : "This is a admin ui page with all admin UI features like delete , edit,mark,search",
+            img : admin_ui,
             tech_stack :[
-                "HTML","CSS","React" , "Chakra UI", "Type Script"
+                "HTML","CSS","React" ,"JS",
             ],
             features : [
-                "Mobile First Approach",
-                "Responsive",
-                "Time Bound",
-                "3 screens - Home,Quiz,Score"
-            ]
+               "Searching",
+               "Edit",
+               "Delete",
+               "Mark and Delete",
+               "Pagination"
+            ],
+            github:"https://github.com/sakti8093/geektrust-assignments/tree/main/Admin-ui",
+            live:"https://sakti-admin-ui-geektrust.netlify.app/",
+            tag:"frontend"
         },
-        {
-            name : "React Quiz App",
-            desc : "This is a Simple React Quiz App with time bound and mobile first approach",
-            img : quiz,
-            tech_stack :[
-                "HTML","CSS","React" , "Chakra UI", "Type Script"
-            ],
-            features : [
-                "Mobile First Approach",
-                "Responsive",
-                "Time Bound",
-                "3 screens - Home,Quiz,Score"
-            ]
-        }
     ],
     education : [
         {
