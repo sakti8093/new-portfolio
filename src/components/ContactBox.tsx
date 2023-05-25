@@ -24,7 +24,7 @@ const ContactBox = () => {
   return (
     <div>
       <p className="mt-10 text-lg font-semibold text-white">Get In Touch</p>
-      <div className="custom-backdrop p-10 mt-4">
+      <div className="custom-backdrop p-5 md:p-10 mt-4">
         <form action="" >
           <div className="w-full relative">
             <label

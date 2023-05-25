@@ -128,7 +128,7 @@ const data : data = {
             ],
             live:"https://wework-ex0uxde09-sakti8093.vercel.app/",
             github:"https://github.com/sakti8093/wework-ui",
-            tag:"Front end"
+            tag:"Frontend"
         },
         {
             name : "Ecommerce App",
@@ -179,7 +179,7 @@ const data : data = {
             ],
             github:"https://github.com/sakti8093/geektrust-assignments/tree/main/Admin-ui",
             live:"https://sakti-admin-ui-geektrust.netlify.app/",
-            tag:"frontend"
+            tag:"Frontend"
         },
     ],
     education : [
@@ -215,7 +215,7 @@ const data : data = {
         },
         {
             name:"Schooling till Matriculation",
-            college:"Kendriya Vidyalaya Np. 1,Bhubaneswar",
+            college:"Kendriya Vidyalaya No. 1,Bhubaneswar",
             duration:"Aug 2005 - Aug 2015",
             achievements :[
                 "Secured 8.2 CGPA in Academcs",

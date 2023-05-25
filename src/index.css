@@ -83,7 +83,6 @@ body {
 
 .profile {
   background: var(--primary-bg);
- border-bottom: 1px solid black;
 }
 
 .scroll-content {
@@ -92,7 +91,7 @@ body {
   overflow: scroll;
 }
 .custom-backdrop {
-  background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
+  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
 }
 
 .scroll-content {
@@ -134,17 +133,22 @@ body {
 
 @keyframes slideFromLeft {
   from {
-    transform: translateX(100%);
+    transform: translate(-100%);
     opacity: 0;
   }
   to {
-    transform: translateX(0);
+    transform: translate(-0%);
     opacity: 1;
   }
 }
 
 .animate-slideInFromBottom {
   animation-name: slideInFromBottom;
+  animation-duration: 0.5s;
+}
+
+.animate-slideFromLeft {
+  animation-name:slideFromLeft;
   animation-duration: 0.5s;
 }
 

@@ -27,7 +27,6 @@ const ProjectSlider = () => {
       loop={true}
       autoplay={{ delay: 2000 }}
       ref={swiperRef}
-      className="mt-4"
       breakpoints={{
         // when window width is >= 320px
         320: {
@@ -52,19 +51,19 @@ const ProjectSlider = () => {
         // when window width is >= 1200
         1200: {
           slidesPerView: 3,
-          spaceBetween: 20,
+          spaceBetween: 0,
         },
       }}
     >
       {data.projects.map((elem) => (
-        <SwiperSlide>
+        <SwiperSlide className="p-2" >
              <Badge.Ribbon text={elem.tag} color="magenta">
           <div
             className="p-4 h-[400px] text-sm custom-backdrop rounded-lg project relative "
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            <div className="h-[200px] w-full">
+            <div className="h-[200px] w-full ">
               <Image
                 width={"100%"}
                 height={"100%"}
@@ -74,7 +73,7 @@ const ProjectSlider = () => {
             </div>
             <p className=" font-medium text-md text-white mt-2">{elem.name}</p>
             <p className="mt-1">{elem.desc}</p>
-            <div className="w-full left-0 h-[180px] right-0 mt-2 absolute bottom-1 bg-background-0 features animate-slideInFromBottom p-4 rounded-2xl">
+            <div className="w-full left-0 h-[180px] bottom-0 right-0 mt-2 absolute bg-background-0 features animate-slideInFromBottom p-4">
               {elem.features.map((elem,index) => (
                 <div key={index} className="flex items-center gap-2 text-sm">
                   <p className="text-text-yellow">
