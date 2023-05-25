@@ -1,24 +1,24 @@
 # new-portfolio
 HI ALL , THIS IS A NEW PORTFOLIO BUILD USING TYPESCRIPT,REACT AND TAILWIND CSS 
 
-FEATURES -
-1- Tried to implement component based structuring
-2- Used Progressbar.js for lines and circular progress bar
-3- Used React-typed-animation for typing effect
-4- Used data.ts for storing all data so that whenever we cant do add or remove data it will be ease
+FEATURES - </br>
+1- Tried to implement component based structuring </br>
+2- Used Progressbar.js for lines and circular progress bar </br>
+3- Used React-typed-animation for typing effect </br>
+4- Used data.ts for storing all data so that whenever we cant do add or remove data it will be ease </br>
 
-TODOS -
-1- Connecting contact us to nodemailer
-2- Adding remaing projects
-3- Adding certficates to education
-4- Adding experience time line
+TODOS -</br>
+1- Connecting contact us to nodemailer </br>
+2- Adding remaing projects </br>
+3- Adding certficates to education </br>
+4- Adding experience time line </br>
 
-AS THIS PROJECT IS MADE WITH VITE FOR RUNNING PROJECT :
+AS THIS PROJECT IS MADE WITH VITE FOR RUNNING PROJECT :</br>
 
-1- Clone the repo
-2- use command npm run dev
-3- thats it !!
+1- Clone the repo</br>
+2- use command npm run dev</br>
+3- thats it !!</br>
 
-FOR BUILDING
+FOR BUILDING</br>
 
-1- use command npm run build
+1- use command npm run build</br>
