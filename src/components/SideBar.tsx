@@ -14,9 +14,9 @@ type ChildComponentProps = {
 
 const SideBar:React.FC<ChildComponentProps> = ({sideRef,handleHide}) => {
   return (
-    <div ref={sideRef} className="w-[300px] h-[100vh] fixed sidebar top-0 hidden md:block z-30 animate-slideFromLeft">
+    <div ref={sideRef} className="w-[300px] h-[100vh] fixed sidebar top-0 hidden lg:block z-30 animate-slideFromLeft">
       <ProfileSideBar />
-      <div className="absolute top-3 right-3 z-30 text-xl md:hidden" onClick={()=>handleHide()} ><RxCross2/></div>
+      <div className="absolute top-3 right-3 z-30 text-xl lg:hidden" onClick={()=>handleHide()} ><RxCross2/></div>
       <div className="scroll-content p-4">
         <CircularProgressSideBar />
         <LineProgressSideBar />

@@ -30,8 +30,8 @@ const Education = () => {
                     ))}
                   </div>
                 </div>
-                <div className='w-20 md:w-40'  >
-                  <Image className="w-full h-full object-cover" src={elem.certificate} />
+                <div className=' w-40 h-10 md:h-20 border object-cover'  >
+                  <Image height={'100%'} width={'100%'} className="object-cover" src={elem.certificate} />
                 </div>
               </div>
             </div>

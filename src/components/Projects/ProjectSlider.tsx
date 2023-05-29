@@ -35,7 +35,7 @@ const ProjectSlider = () => {
         },
         // when window width is >= 480px
         480: {
-          slidesPerView: 1,
+          slidesPerView: 2,
           spaceBetween: 10,
         },
         // when window width is >= 640px
@@ -55,8 +55,8 @@ const ProjectSlider = () => {
         },
       }}
     >
-      {data.projects.map((elem) => (
-        <SwiperSlide className="p-2" >
+      {data.projects.map((elem,index) => (
+        <SwiperSlide key={index} className="p-2" >
              <Badge.Ribbon text={elem.tag} color="magenta">
           <div
             className="p-4 h-[400px] text-sm custom-backdrop rounded-lg project relative "
@@ -104,12 +104,13 @@ const ProjectSlider = () => {
               </div>
             </div>
             <div className=" flex gap-1 flex-wrap mt-3">
-              {elem.tech_stack.map((elem) => (
-                <p className=" text-xs bg-black pl-3 pr-3 pt-1 pb-1 rounded-full">
+              {elem.tech_stack.map((elem,index) => (
+                <p key={index} className=" text-xs bg-black pl-3 pr-3 pt-1 pb-1 rounded-full">
                   {elem}
                 </p>
               ))}
             </div>
+            <p className=" sm:block md:hidden" >Read more ...</p>
           </div>
           </Badge.Ribbon>
         </SwiperSlide>

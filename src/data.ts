@@ -4,6 +4,9 @@ import weworkui from '../src/assets/weworkui.png'
 import admin_ui from '../src/assets/admin_ui.png'
 import ecommerce from '../src/assets/ecommerce.png'
 import tictactoe from '../src/assets/tictactoe.png'
+import btech_certificate from '../src/assets/btech_certificate.png'
+import diploma_certificate from '../src/assets/diploma_certificate.png'
+import matric_certificate from '../src/assets/matric_certificate.png'
 
 type data = {
     languages: languages[] 
@@ -12,6 +15,7 @@ type data = {
     soft_skills : string[],
     projects : projects[],
     education :education[],
+    experience :experience[],
 }
 
 type education ={
@@ -41,6 +45,14 @@ type projects = {
     live:string,
     github : string,
     tag:string
+}
+
+type experience = {
+    company_name : string,
+    website : string,
+    duration:string,
+    role:string,
+    responsibility:string[]
 }
 
 const data : data = {
@@ -201,7 +213,7 @@ const data : data = {
                 "Secured 9.24 CGPA",
                 "Awarded as Branch Topper"
             ],
-            certificate:sakti_masai
+            certificate:btech_certificate
         },
         {
             name:"Diploma in Mechanical Engineering",
@@ -211,7 +223,7 @@ const data : data = {
                 "Secured 75% in Academcs",
                 "within top 10 rankers"
             ],
-            certificate:sakti_masai
+            certificate:diploma_certificate
         },
         {
             name:"Schooling till Matriculation",
@@ -220,9 +232,31 @@ const data : data = {
             achievements :[
                 "Secured 8.2 CGPA in Academcs",
             ],
-            certificate:sakti_masai
+            certificate:matric_certificate
+        }
+    ],
+    experience:[
+        {
+            company_name:"Innoventes Technologies",
+            role:"Internship",
+            duration:"1 month",
+            website:"https://www.innoventestech.com/",
+            responsibility:[
+                "completing daily assignments",
+                "Involved in developing wensite from scratch",
+                "worked on next js and tailwind css"
+            ]
+        },
+        {
+            company_name:"Innoventes Technologies",
+            role:"full time",
+            duration:"current",
+            website:"https://www.innoventestech.com/",
+            responsibility:[
+                "working in a onsite set up with client",
+                "worked with a fintech startup company"
+            ]
         }
     ]
-
 }
 export default data
