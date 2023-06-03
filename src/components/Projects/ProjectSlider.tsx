@@ -5,6 +5,8 @@ import data from "../../data";
 import { MdDone } from "react-icons/md";
 import { Badge, Button, Image } from "antd";
 import { useRef } from "react";
+import {BsFillCaretRightFill,BsFillCaretLeftFill} from 'react-icons/bs'
+
 const ProjectSlider = () => {
   const swiperRef = useRef<any | null>();
 
@@ -23,7 +25,12 @@ const ProjectSlider = () => {
       modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
       spaceBetween={20}
       slidesPerView={"auto"}
-      navigation
+      navigation={
+        {
+          nextEl : ".right-swipe-btn",
+          prevEl : ".left-swipe-btn"
+        }
+      }
       loop={true}
       autoplay={{ delay: 2000 }}
       ref={swiperRef}
@@ -50,7 +57,7 @@ const ProjectSlider = () => {
         },
         // when window width is >= 1200
         1200: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 0,
         },
       }}
@@ -115,6 +122,13 @@ const ProjectSlider = () => {
           </Badge.Ribbon>
         </SwiperSlide>
       ))}
+     <div className="flex text-2xl justify-between" >
+      <div></div>
+      <div className="flex items-end text-end" >
+        <div className="left-swipe-btn" > <BsFillCaretLeftFill /> </div>
+        <div className="right-swipe-btn" > <BsFillCaretRightFill /> </div>
+      </div>
+     </div>
     </Swiper>
   );
 };
